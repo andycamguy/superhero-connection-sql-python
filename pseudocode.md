@@ -28,14 +28,67 @@ Questions:
 Who are the superheroes? where will the data be drawn from?
 
 ## Render
+- Provide an Interactive Shell Interface for Users: After setting up the database, the script presents an interactive shell interface to the users. This interface allows users to interact with the database through the terminal using various commands.
+  *Note* there will only be interactivity in the terminal and no where else. queries will be made using sql
 
 ## Compute
 
 ## END
 
+# Flowchart 
+```
+                      +-------------------------------+
+                      |       Begin: Connect DB       |
+                      +-------------------------------+
+                                  |
+                                  v
+                      +-------------------------------+
+                      | Initialize: Create Table     |
+                      +-------------------------------+
+                                  |
+                                  v
+                      +-------------------------------+
+                      |         Render: Shell         |
+                      |                               |
+                      |  +-------------------------+  |
+                      |  | Display Options         |  |
+                      |  +-------------------------+  |
+                      |             |                 |
+                      |             v                 |
+                      |  +-------------------------+  |
+                      |  | User Input and Action   |  |
+                      |  +-------------------------+  |
+                      |             |                 |
+                      v             v                 |
+          +------------------+   +------------------+  |
+          | Update Database |   | Show Data         |  |
+          +------------------+   +------------------+
+```
+
 # Functional 
 
 ```
+function create table
+{
+if table name doesn't exist, make the table with the name
+}
+function make a hero
+{
+add a hero and values with it
+
+}
+function add relationships
+{
+if a friend of a hero, build a link on grounds of being an ally
+
+if an enemy of a hero, build a link on grounds of being an enemy
+}
+
+function add abilities
+{
+if a hero exists claiming of having an ability, connect it otherwise ignore
+}
+
 
 ```
 
@@ -49,11 +102,12 @@ Connect to the PostgreSQL Database: At the beginning, the program establishes a 
 Initialize:
 
 Create a Table for Superheroes and Villains: Once connected to the database, the script initializes the project by creating a table named "heroes_villains." This table will store information about superheroes and villains, such as their names and types.
+
 Render:
 
-Provide an Interactive Shell Interface for Users: After setting up the database, the script presents an interactive shell interface to the users. This interface allows users to interact with the database through the terminal using various commands.
+- Provide an Interactive Shell Interface for Users: After setting up the database, the script presents an interactive shell interface to the users. This interface allows users to interact with the database through the terminal using various commands.
 
-Options Display: In the interactive shell, the available options are displayed to the users. These options represent the CRUD operations (Create, Read, Update, Delete) that they can perform on the superhero and villain data.
+X Options Display: In the interactive shell, the available options are displayed to the users. These options represent the CRUD operations (Create, Read, Update, Delete) that they can perform on the superhero and villain data.
 
 User Input and Action: Users are prompted to enter their choice (1/2/3/4/5) based on the displayed options. The script takes the user's input and proceeds accordingly:
 
